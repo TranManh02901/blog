@@ -3,51 +3,26 @@ import { Img, Flex, Text, Heading, Grid, GridItem, Highlight, chakra, shouldForw
 import almondblossom from "../media/almondblossom.jpg";
 import { motion, isValidMotionProp } from "framer-motion";
 import GoToTop from "../components/gototop"
+import { Learning } from "../main/learnContent"
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
+
 const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
 });
 
-export const Learn = () => {
-    const gift = [
-        {
-            id: 1,
-            name: 'lua chon 1'
-        },
-        {
-            id: 2,
-            name: 'lua chon 2'
-        },
-        {
-            id: 3,
-            name: 'lua chon 3'
-        },
-    ]
+export const ToggleBtn = () => {
+    const [show, setShow] = useState(false)
 
-    const [checked, setChecked] = useState();
-
-    const handleCheck = () => {
-        setChecked() => {
-            const isChecked = checked.icludes(id);
-        }
-    }
-
-    const handleUpdate = () => {
-        console.log({ id: checked });
-    }
     return (
-        <div className='congaf' style={{ padding: 20 }}>
-            {gift.map(gift => (
-                <div key={gift.id}>
-                    <input
-                        type='checkbox'
-                        checked={checked === gift.id}
-                        onChange={() => handleCheck(gift.id)} />
-                    <label>{gift.name}</label>
-                </div>
-            ))}
-            <button onClick={handleUpdate}>Click button</button>
+        <div style={{ padding: 30 }}>
+            <button
+                className='btn btn-primary mb-3'
+                onClick={() => setShow(!show)}>
+                Toggle
+            </button>
+
+            {show && <Learning />}
         </div>
     )
 }
@@ -365,7 +340,7 @@ export class Home extends React.Component {
                     </Helmet>
                 </div>
                 <GoToTop />
-                <Learn />
+                <ToggleBtn />
                 <Name />
                 <AboutMe />
                 <Neofetch />
