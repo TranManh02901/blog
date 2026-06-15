@@ -6,6 +6,8 @@ import GoToTop from "../components/gototop"
 import { Learning } from "../main/learnContent"
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
+import { Todoapp } from './todo';
+import { ContentMain } from './vd_usecontext';
 
 const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -341,6 +343,8 @@ export class Home extends React.Component {
                 </div>
                 <GoToTop />
                 <ToggleBtn />
+                <Todoapp />
+                <ContentMain />
                 <Name />
                 <AboutMe />
                 <Neofetch />
