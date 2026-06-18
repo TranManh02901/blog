@@ -10,21 +10,6 @@ import { StoreProvider } from './components/store';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
-// fake comments 
-function emitComment(id) {
-  setInterval(() => {
-    window.dispatchEvent(
-      new CustomEvent(`lesson-${id}`, {
-        detail: `Nội dung comment của lesson ${id}`
-      })
-    )
-  }, 3000)
-}
-
-emitComment(1)
-emitComment(2)
-emitComment(3)
-
 root.render(
   <StrictMode>
     <StoreProvider>

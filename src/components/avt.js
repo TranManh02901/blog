@@ -1,6 +1,6 @@
 import {Flex, Img, chakra, shouldForwardProp } from "@chakra-ui/react";
 import React from "react";
-import profile from "../media/profile.png"
+import profile from "../media/main-avt.jpg"
 import { motion, isValidMotionProp } from "framer-motion";
 
 const ChakraBox = chakra(motion.div, {

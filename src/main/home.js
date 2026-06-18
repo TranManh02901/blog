@@ -2,32 +2,30 @@ import React from 'react';
 import { Img, Flex, Text, Heading, Grid, GridItem, Highlight, chakra, shouldForwardProp, Box, useColorModeValue } from "@chakra-ui/react";
 import almondblossom from "../media/almondblossom.jpg";
 import { motion, isValidMotionProp } from "framer-motion";
-import GoToTop from "../components/gototop"
-import { Learning } from "../main/learnContent"
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
-import { Todoapp } from './todo';
-import { ContentMain } from './vd_usecontext';
+// import { Todoapp } from './todo';
+// import { ContentMain } from './vd_usecontext';
 
 const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
 });
 
-export const ToggleBtn = () => {
-    const [show, setShow] = useState(false)
+// export const ToggleBtn = () => {
+//     const [show, setShow] = useState(false)
 
-    return (
-        <div style={{ padding: 30 }}>
-            <button
-                className='btn btn-primary mb-3'
-                onClick={() => setShow(!show)}>
-                Toggle
-            </button>
+//     return (
+//         <div style={{ padding: 30 }}>
+//             <button
+//                 className='btn btn-primary mb-3'
+//                 onClick={() => setShow(!show)}>
+//                 Toggle
+//             </button>
 
-            {show && <Learning />}
-        </div>
-    )
-}
+//             {show && <Learning />}
+//         </div>
+//     )
+// }
 
 export const Name = () => {
     return (
@@ -42,7 +40,7 @@ export const Name = () => {
                     xl: "7xl"
                 }}
                 fontFamily='Anurati'
-                color={useColorModeValue('blackAlpha.700', 'white')}>CONGAF</Heading>
+                color={useColorModeValue('blackAlpha.700', 'white')}>TRAN DUC MANH</Heading>
         </Flex>
     );
 };
@@ -51,8 +49,8 @@ export const AboutMe = () => {
         <Flex justifyContent="center" >
             <Text
                 color={useColorModeValue('blackAlpha.700', 'white')}
-                fontSize={{ base: "12", sm: "12", md: "13", lg: "15", xl: "15" }} fontFamily='Calibri Light' shadow="2xl" borderRadius="3xl" maxWidth="500" textAlign="center" margin="10">
-                A Bridge System Engineer fluent in Japanese with a keen interest in the IT industry. Currently, I am actively engaged in bridging technical solutions and facilitating communication between Japanese and Vietnamese-speaking teams. Beyond my role, I am deeply fascinated by the realm of Cyber Security and am dedicated to expanding my knowledge and expertise in this field. With a passion for innovation and a commitment to continuous learning, I am eager to contribute my skills and insights to further enhance both the technological and security landscapes.
+                fontSize={{ base: "12", sm: "12", md: "13", lg: "15", xl: "15" }} fontFamily='Calibri Light' shadow="2xl" borderRadius="3xl" maxWidth="500" textAlign="center" margin="10" padding="5">
+                Front-end Developer with 2+ years of experience working on real-world client projects. Skilled in converting Figma designs and templates into responsive, user-friendly web interfaces using HTML, CSS, JavaScript, jQuery. Also experienced in basic PHP backend tasks, including creating, updating, and managing data.
             </Text>
         </Flex>
     )
@@ -341,10 +339,6 @@ export class Home extends React.Component {
                         <link rel="canonical" href="https://0ji54n.space/" />
                     </Helmet>
                 </div>
-                <GoToTop />
-                <ToggleBtn />
-                <Todoapp />
-                <ContentMain />
                 <Name />
                 <AboutMe />
                 <Neofetch />
