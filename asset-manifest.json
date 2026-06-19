@@ -1,7 +1,6 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.58fbc3fe.css",
-    "main.js": "/blog/static/js/main.4369df6c.js",
+    "main.js": "/blog/static/js/main.c3cea6c7.js",
     "static/js/714.242c08c2.chunk.js": "/blog/static/js/714.242c08c2.chunk.js",
     "static/js/787.f587e8d5.chunk.js": "/blog/static/js/787.f587e8d5.chunk.js",
     "static/media/balatro17.mkv": "/blog/static/media/balatro17.487bd375d7b9c46b9b56.mkv",
@@ -13,6 +12,7 @@
     "static/media/script source.png": "/blog/static/media/script source.3ccc38958b1142a76f53.png",
     "static/media/word source.png": "/blog/static/media/word source.8bb5dad5154fabe68d8b.png",
     "static/media/pcapfilepicture.jpg": "/blog/static/media/pcapfilepicture.a116bcf40211ff31d64f.jpg",
+    "static/media/main-avt.jpg": "/blog/static/media/main-avt.cd157633bc76a4841dce.jpg",
     "static/media/almondblossom.jpg": "/blog/static/media/almondblossom.4e6eae2fdc5432a0f1be.jpg",
     "static/media/Firsthalf.jpg": "/blog/static/media/Firsthalf.a4ba2fa94db18c594e56.jpg",
     "static/media/html source.png": "/blog/static/media/html source.c3160df5fc95e8c871a2.png",
@@ -76,7 +76,6 @@
     "static/media/balatro16.png": "/blog/static/media/balatro16.57518d497e40d78e3910.png",
     "static/media/readme.jpg": "/blog/static/media/readme.4aefa1f05f9ed400991d.jpg",
     "static/media/lootstash.png": "/blog/static/media/lootstash.1726b1d00fec4749643f.png",
-    "static/media/profile.png": "/blog/static/media/profile.cdccea5ac68458b4f595.png",
     "static/media/packedaway.png": "/blog/static/media/packedaway.d7392762dc9e5a11fe9a.png",
     "static/media/loadoption.png": "/blog/static/media/loadoption.c2b9601fcd606d050a06.png",
     "static/media/followthepath.png": "/blog/static/media/followthepath.e85f3ccbd9933d774845.png",
@@ -96,13 +95,11 @@
     "static/media/IRchatlog.png": "/blog/static/media/IRchatlog.e03e009f3502e1238168.png",
     "static/media/checky.jpg": "/blog/static/media/checky.98a73a5ae821c592a3f8.jpg",
     "index.html": "/blog/index.html",
-    "main.58fbc3fe.css.map": "/blog/static/css/main.58fbc3fe.css.map",
-    "main.4369df6c.js.map": "/blog/static/js/main.4369df6c.js.map",
+    "main.c3cea6c7.js.map": "/blog/static/js/main.c3cea6c7.js.map",
     "714.242c08c2.chunk.js.map": "/blog/static/js/714.242c08c2.chunk.js.map",
     "787.f587e8d5.chunk.js.map": "/blog/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58fbc3fe.css",
-    "static/js/main.4369df6c.js"
+    "static/js/main.c3cea6c7.js"
   ]
 }
