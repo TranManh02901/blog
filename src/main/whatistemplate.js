@@ -1,7 +1,6 @@
 import React from "react";
 import {Flex,Grid,GridItem, Text, Highlight,Box,chakra, shouldForwardProp} from "@chakra-ui/react"
 import { motion, isValidMotionProp } from "framer-motion";
-import GoToTop from "../components/gototop";
 const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
 });
@@ -50,10 +49,10 @@ const Dolphin = () => {
                     “The Front Line Advanced Research and Expertise (FLARE) team is an elite technical group of malware analysts, researchers, and hackers. We are looking to hire smart individuals interested in reverse engineering. We have created this series of binary challenges to test your skills. We encourage anyone to participate and practice their skills while having fun!”
                     </Text>
                     <Text marginTop="5" fontFamily="Hack" fontSize="13">
-                    Starting in 2014, FlareOn is a world-scale Reverse Engineering CTF challenge that attracts many participants every year. They could be a skilled, talented professional, or could just be a student who has interested in this kind of stuff and can join the fun.
+                    Starting in 2014, Template is a world-scale Reverse Engineering CTF challenge that attracts many participants every year. They could be a skilled, talented professional, or could just be a student who has interested in this kind of stuff and can join the fun.
                     </Text>
                     <Text fontFamily="Hack" fontSize="13" marginTop="5">
-                    This folder contains solutions for Flare On 2022 (Flare On 9) challenges (There were 11 challenges and I only solved 7). Even though the CTF has ended, you still be able to download the challenges of this year and the year before that and try it yourself anytime. So if you want to try it first, get out of here now and come back again when you’re completely stuck. Or if you’ve completed the challenge and want to know how I solved it or for any other reasons, enjoy reading my writeups and I hope you also enjoy reading my blog!
+                    This folder contains solutions for Template 2022 (Template 9) challenges (There were 11 challenges and I only solved 7). Even though the CTF has ended, you still be able to download the challenges of this year and the year before that and try it yourself anytime. So if you want to try it first, get out of here now and come back again when you’re completely stuck. Or if you’ve completed the challenge and want to know how I solved it or for any other reasons, enjoy reading my writeups and I hope you also enjoy reading my blog!
                     </Text>
                 </Box>
             </Grid>
@@ -61,7 +60,7 @@ const Dolphin = () => {
     )
 }
 
-export class WhatIsFlareOn extends React.Component {
+export class WhatIsTemplate extends React.Component {
     render(){
         return(
         <ChakraBox
@@ -76,7 +75,6 @@ export class WhatIsFlareOn extends React.Component {
             opacity: 1 }}
         exit={{
             y: -40}}> 
-        <GoToTop/>
         <DolphinTer/>
         <Dolphin/>
         </ChakraBox>

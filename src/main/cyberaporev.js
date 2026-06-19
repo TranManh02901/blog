@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {Heading,Flex,useColorModeValue,Text,Grid,chakra,Img,shouldForwardProp} from "@chakra-ui/react";
-import GoToTop from "../components/gototop";
 import { motion, isValidMotionProp } from "framer-motion";
 import packedaway from "../media/cyberapo/packedaway.png"
 import packedaway3 from "../media/cyberapo/packedaway3.png"
@@ -134,7 +133,7 @@ export class CYBERAPO_REV extends React.Component{
                     <meta name="description" content="Đây là năm đầu tiên mình tham gia Cyber Apocalypse, theo đánh giá chung thì khá dễ thở với mức chênh lệch số điểm giữa các challenge dễ khó khác nhau là không nhiều. Vì tham gia một mình nên mình phải làm toàn bộ các danh mục để kiếm được nhiều điểm nhất có thể, nhưng trong đó vẫn tập trung vào 3 thứ mình dành thời gian nhiều nhất: rev, pwn và crypto."/>
                     <meta property="og:type" content="article"/>
                     <meta property="og:title" content="Cyber Apocalypse 2024's writeup"/>
-                    <meta property="og:url" content="https://0ji54n.space/works/cyberaporev"/>
+                    <meta property="og:url" content="https://tranmanh02901.github.io/blog/#/works/cyberaporev"/>
                     <meta property="og:site_name" content="0ji54n"/>
                     <meta property="og:description" content="Đây là năm đầu tiên mình tham gia Cyber Apocalypse, theo đánh giá chung thì khá dễ thở với mức chênh lệch số điểm giữa các challenge dễ khó khác nhau là không nhiều. Vì tham gia một mình nên mình phải làm toàn bộ các danh mục để kiếm được nhiều điểm nhất có thể, nhưng trong đó vẫn tập trung vào 3 thứ mình dành thời gian nhiều nhất: rev, pwn và crypto."/>
                     <meta property="og:locale" content="en_US"/>
@@ -143,10 +142,9 @@ export class CYBERAPO_REV extends React.Component{
                     <meta property="article:tag" content="Rev"/>
                     <meta name="twitter:card" content="summary"/>
                     <meta name="twitter:image" content={followthepath5}/>
-                    <link rel="canonical" href="https://0ji54n.space/works/cyberaporev"/>
+                    <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/works/cyberaporev"/>
                     </Helmet>
                 </div>
-                <GoToTop/>
                 <Title/>
                 <Content/>
                 <Flex justifyContent="center">

@@ -5,17 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 // import { ThemeProvider } from './components/contexts/ThemeContext';
-import { StoreProvider } from './components/store';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <StoreProvider>
-      <ColorModeScript />
-      <App />
-    </StoreProvider>
+    <ColorModeScript />
+    <App />
   </StrictMode>
 );
 

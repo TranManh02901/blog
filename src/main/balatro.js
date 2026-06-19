@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {Heading,Flex,useColorModeValue,Text,Grid,chakra,Img,shouldForwardProp,Link,Box} from "@chakra-ui/react";
-import GoToTop from "../components/gototop";
 import { motion, isValidMotionProp } from "framer-motion";
 import Giscus from '@giscus/react';
 import thumb from "../media/balatro/thumb.jpg";
@@ -175,7 +174,7 @@ export class Balatro extends React.Component{
                     <meta name="description" content="Recently I found Balatro - a Poker (actually Big Two) - based card game. I'm usually not good at all types of video games, and with curiosity, I decided to find out how this game was made."/>
                     <meta property="og:type" content="article"/>
                     <meta property="og:title" content="Balatro - Playing around with Love2D game"/>
-                    <meta property="og:url" content="https://0ji54n.space/works/balatro"/>
+                    <meta property="og:url" content="https://tranmanh02901.github.io/blog/#/works/balatro"/>
                     <meta property="og:site_name" content="0ji54n"/>
                     <meta property="og:description" content="Recently I found Balatro - a Poker (actually Big Two) - based card game. I'm usually not good at all types of video games, and with curiosity, I decided to find out how this game was made."/>
                     <meta property="og:locale" content="en_US"/>
@@ -184,10 +183,9 @@ export class Balatro extends React.Component{
                     <meta property="article:tag" content="reverse engineering"/>
                     <meta name="twitter:card" content="summary"/>
                     <meta name="twitter:image" content={thumb}/>
-                    <link rel="canonical" href="https://0ji54n.space/works/balatro"/>
+                    <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/works/balatro"/>
                     </Helmet>
                 </div>
-                <GoToTop/>
                 <Title/>
                 <Content/>
                 <Flex justifyContent="center">

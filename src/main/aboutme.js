@@ -1,7 +1,6 @@
 import React from "react";
 import { Flex, Grid, GridItem, Text, Highlight, SimpleGrid, Box, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
-import GoToTop from "../components/gototop"
 import { Helmet } from "react-helmet";
 const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -246,10 +245,9 @@ export class AboutMe extends React.Component {
                 <div>
                     <Helmet>
                         <title>About me</title>
-                        <link rel="canonical" href="https://0ji54n.space/about" />
+                        <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/about" />
                     </Helmet>
                 </div>
-                <GoToTop />
                 <Txt />
                 <Skill />
                 <Bio />

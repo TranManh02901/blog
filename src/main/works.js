@@ -6,8 +6,8 @@ import { Helmet } from "react-helmet";
 
 const FolderName = [
     {
-        "name": "Flareon",
-        "link": "./flareon9"
+        "name": "Templates",
+        "link": "./templates"
     },
     {
         "name": "Other",
@@ -115,8 +115,8 @@ export class Works extends React.Component {
             <Box>
                 <div>
                     <Helmet>
-                        <title>CTF's writeups</title>
-                        <link rel="canonical" href="https://0ji54n.space/works/" />
+                        <title>Projects</title>
+                        <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/works/" />
                     </Helmet>
                 </div>
                 <DolphinTer />

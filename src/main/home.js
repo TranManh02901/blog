@@ -336,7 +336,7 @@ export class Home extends React.Component {
                 <div>
                     <Helmet>
                         <title>Home Page</title>
-                        <link rel="canonical" href="https://0ji54n.space/" />
+                        <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/" />
                     </Helmet>
                 </div>
                 <Name />

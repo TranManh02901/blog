@@ -5,35 +5,35 @@ import { Link } from "react-router-dom";
 
 const FolderName = [
     {
-        "name": "01_Flaredle",
-        "link": "./01"
+        "name": "template_business",
+        "link": "./template_business"
     },
     {
-        "name": "02_Pixel_Poker",
-        "link": "./02"
+        "name": "template_chungkhoan",
+        "link": "./template_chungkhoan"
     },
     {
-        "name": "03_Magic_8_Ball",
-        "link": "./03"
+        "name": "template_cokhi",
+        "link": "./template_cokhi"
     },
     {
-        "name": "04_darn_mice",
-        "link": "./04"
+        "name": "template_cokhi2",
+        "link": "./template_cokhi2"
     },
     {
-        "name": "05_T8",
-        "link": "./05"
+        "name": "template_flower",
+        "link": "./template_flower"
     },
     {
-        "name": "06_à_la_mode",
-        "link": "./06"
+        "name": "template_noithat",
+        "link": "./template_noithat"
     },
     {
-        "name": "07_anode",
-        "link": "./07"
+        "name": "template_trading",
+        "link": "./template_trading"
     },
     {
-        "name": "WhatisFlareOn.txt",
+        "name": "WhatisTemplate.txt",
         "link": "./readme"
     },
 ]
@@ -129,7 +129,7 @@ const Dolphin = () => {
                                             colorScheme='rgba(52, 52, 52, 0.2)'
                                             boxSize="20"
                                             variant="ghost"
-                                            icon={item.name === "WhatisFlareOn.txt" ? <AiFillFileText size="80" /> : <AiFillFolder size="80" />} />
+                                            icon={item.name === "WhatisTemplate.txt" ? <AiFillFileText size="80" /> : <AiFillFolder size="80" />} />
                                     </Link>
                                     <Text fontFamily="Hack">{item.name}</Text>
                                 </Box>
@@ -142,7 +142,7 @@ const Dolphin = () => {
     )
 }
 
-export class FlareOn9 extends React.Component {
+export class Templates extends React.Component {
     render() {
         return (
             <Box>
