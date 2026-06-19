@@ -37,7 +37,7 @@ const Txt = () => {
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Text color="purple.500" fontSize="12">$ <Highlight query="cat" styles={{ color: "blue.400" }}>cat </Highlight><Highlight query="readme.txt" styles={{ color: "whitesmoke" }}>readme.txt</Highlight></Text>
+                        <Text color="purple.500" fontSize="12">{'>'} <Highlight query="cat" styles={{ color: "green.400" }}>cat </Highlight><Highlight query="readme.txt" styles={{ color: "whitesmoke" }}>readme.txt</Highlight></Text>
                     </ChakraBox>
                 </GridItem>
                 <GridItem
@@ -110,7 +110,7 @@ const Skill = () => {
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Text color="purple.500" fontSize="13">$ <Highlight query="cd" styles={{ color: "green.400" }}>cd </Highlight><Highlight query="skills" styles={{ color: "blue.400" }}>skills </Highlight><Highlight query=";ls" styles={{ color: "green.400" }}>;ls</Highlight></Text>
+                        <Text color="purple.500" fontSize="13">{'>'} <Highlight query="cd" styles={{ color: "green.400" }}>cd </Highlight><Highlight query="skills" styles={{ color: "blue.400" }}>skills </Highlight><Highlight query=";ls" styles={{ color: "green.400" }}>;ls</Highlight></Text>
                     </ChakraBox>
                 </GridItem>
                 <GridItem
@@ -182,7 +182,7 @@ const Bio = () => {
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Text color="purple.500" fontSize="14">$ <Highlight query="./bio" styles={{ color: "orange.700" }}>./bio</Highlight></Text>
+                        <Text color="purple.500" fontSize="14">{'>'} <Highlight query="cd" styles={{ color: "green.400" }}>cd</Highlight> <Highlight query="bio" styles={{ color: "blue.400" }}>bio</Highlight></Text>
                     </ChakraBox>
                 </GridItem>
                 <GridItem

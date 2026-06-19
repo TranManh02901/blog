@@ -32,7 +32,7 @@ const DolphinTer = () => {
                 templateColumns='repeat(24, 1fr)'>
                 <GridItem colStart="4" colEnd="24"
                     rowStart="5" rowEnd="5">
-                    <Text color="purple.500" fontSize="14">$ <Highlight query="dolphin" styles={{ color: "green.500" }}> </Highlight><Highlight query="works" styles={{ color: "blue.400" }}>works</Highlight> </Text>
+                    <Text color="purple.500" fontSize="14"> {' > '} <Highlight query="projects" styles={{ color: "blue.400" }}>projects</Highlight> </Text>
                 </GridItem>
             </Grid>
         </Flex>
