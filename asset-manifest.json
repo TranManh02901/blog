@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/blog/static/js/main.b49a8cd1.js",
+    "main.js": "/blog/static/js/main.67cec785.js",
     "static/js/714.242c08c2.chunk.js": "/blog/static/js/714.242c08c2.chunk.js",
     "static/js/787.f587e8d5.chunk.js": "/blog/static/js/787.f587e8d5.chunk.js",
     "static/media/template_cokhi2.png": "/blog/static/media/template_cokhi2.cdbbe51aeef673332a49.png",
@@ -15,9 +15,9 @@
     "static/media/balatro12.png": "/blog/static/media/balatro12.4ddc0f90caba56d9fa20.png",
     "static/media/balatro6.png": "/blog/static/media/balatro6.7ae8b1100e7ae5f82c0c.png",
     "static/media/main-avt.jpg": "/blog/static/media/main-avt.cd157633bc76a4841dce.jpg",
-    "static/media/almondblossom.jpg": "/blog/static/media/almondblossom.4e6eae2fdc5432a0f1be.jpg",
     "static/media/balatro5.png": "/blog/static/media/balatro5.276b0425b19e05d177c5.png",
     "static/media/quickscan2.png": "/blog/static/media/quickscan2.91ab72ba92a05f304958.png",
+    "static/media/flower2.jpg": "/blog/static/media/flower2.77bd449461b5c2749a6c.jpg",
     "static/media/packedaway3.png": "/blog/static/media/packedaway3.e6addc00d088be681dec.png",
     "static/media/thumb.jpg": "/blog/static/media/thumb.1aca90fbbf2e87d6345f.jpg",
     "static/media/balatro9.png": "/blog/static/media/balatro9.f6bd47c41b540bc87ca2.png",
@@ -48,11 +48,11 @@
     "static/media/followthepath5.png": "/blog/static/media/followthepath5.b83485714da8eb6e10cc.png",
     "static/media/balatro15.png": "/blog/static/media/balatro15.daf7be5ca9d3d175fd45.png",
     "index.html": "/blog/index.html",
-    "main.b49a8cd1.js.map": "/blog/static/js/main.b49a8cd1.js.map",
+    "main.67cec785.js.map": "/blog/static/js/main.67cec785.js.map",
     "714.242c08c2.chunk.js.map": "/blog/static/js/714.242c08c2.chunk.js.map",
     "787.f587e8d5.chunk.js.map": "/blog/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.b49a8cd1.js"
+    "static/js/main.67cec785.js"
   ]
 }
