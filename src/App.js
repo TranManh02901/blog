@@ -44,8 +44,8 @@ function App() {
           <Route path="works/templates/template_flower" element={<TemplateFlower />} />
           <Route path="works/templates/template_noithat" element={<TemplateNoithat />} />
           <Route path="works/templates/template_trading" element={<TemplateTrading />} />
-          <Route path="works/another/cyberaporev" element={<CYBERAPO_REV />} />
-          <Route path="works/another/balatro" element={<Balatro />} />
+          <Route path="works/cyberaporev" element={<CYBERAPO_REV />} />
+          <Route path="works/balatro" element={<Balatro />} />
         </Routes>
       </Router>
     </ChakraProvider>

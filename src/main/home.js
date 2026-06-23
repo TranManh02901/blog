@@ -1,6 +1,6 @@
 import React from 'react';
 import { Img, Flex, Text, Heading, Grid, GridItem, Highlight, chakra, shouldForwardProp, Box, useColorModeValue } from "@chakra-ui/react";
-import almondblossom from "../media/almondblossom.jpg";
+import almondblossom from "../media/flower2.jpg";
 import { motion, isValidMotionProp } from "framer-motion";
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
@@ -86,17 +86,17 @@ export const Neofetch = () => {
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Text fontSize="14" color="purple.500"><Highlight query="neofetch" styles={{ color: "green.500" }}>0ji54n@TAKO $~ neofetch</Highlight></Text>
+                        <Text fontSize="14" color="purple.500">{'>'}<Highlight query="personal_info" styles={{ color: "green.500" }}> personal_info</Highlight></Text>
                     </ChakraBox>
                 </GridItem>
                 <GridItem
-                    rowStart="6" rowEnd="20"
+                    rowStart="6" rowEnd="22"
                     colStart={{
                         base: "3",
                         xl: "3"
                     }} colEnd={{
                         base: "9",
-                        xl: "7"
+                        xl: "8"
                     }}
                     overflow="hidden">
                     <ChakraBox
@@ -148,7 +148,7 @@ export const Neofetch = () => {
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='#F4B183'>
                                 <Highlight query='TAKO' styles={{ color: '#A9D18E' }}>
-                                    0ji54n@TAKO
+                                    My personal information
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -167,8 +167,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='OS' styles={{ color: '#A9D18E' }}>
-                                    OS: Arch Linux
+                                <Highlight query='Name' styles={{ color: '#A9D18E' }}>
+                                    Name: Tran Duc Manh
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -178,8 +178,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Host' styles={{ color: '#A9D18E' }}>
-                                    Host: ASUSTeK COMPUTER INC. ROG Strix G512LI_G512LI
+                                <Highlight query='Day of birth' styles={{ color: '#A9D18E' }}>
+                                    Day of birth: 02/09/2001
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -189,8 +189,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Kernel' styles={{ color: '#A9D18E' }}>
-                                    Kernel: 10.0.22000
+                                <Highlight query='Address' styles={{ color: '#A9D18E' }}>
+                                    Address: Hanoi, Vietnam
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -200,8 +200,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Uptime' styles={{ color: '#A9D18E' }}>
-                                    Uptime: 1 day, 23 hours, 27 mins
+                                <Highlight query='Email' styles={{ color: '#A9D18E' }}>
+                                    Email: tranducmanh02901@gmail.com
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -211,8 +211,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Packages' styles={{ color: '#A9D18E' }}>
-                                    Packages: pacman
+                                <Highlight query='Website' styles={{ color: '#A9D18E' }}>
+                                    Website: https://tranmanh02901.github.io/blog/#/
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -222,8 +222,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Shell' styles={{ color: '#A9D18E' }}>
-                                    Shell: zsh
+                                <Highlight query='Occupation' styles={{ color: '#A9D18E' }}>
+                                    Occupation: Front-end Developer
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -233,8 +233,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Resolution' styles={{ color: '#A9D18E' }}>
-                                    Resolution: 1920x1080
+                                <Highlight query='Experience' styles={{ color: '#A9D18E' }}>
+                                    Experience: 2+ years
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -244,8 +244,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='WM' styles={{ color: '#A9D18E' }}>
-                                    WM: i3
+                                <Highlight query='Languages' styles={{ color: '#A9D18E' }}>
+                                    Languages: Vietnamese, Japanese
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -255,8 +255,8 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Terminal' styles={{ color: '#A9D18E' }}>
-                                    Terminal: Sakura
+                                <Highlight query='Frontend' styles={{ color: '#A9D18E' }}>
+                                    Frontend: HTML, CSS, JavaScript, ReactJS
                                 </Highlight>
                             </Text>
                             <Text fontSize={{
@@ -266,47 +266,11 @@ export const Neofetch = () => {
                                 lg: "10",
                                 xl: "10"
                             }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='CPU' styles={{ color: '#A9D18E' }}>
-                                    CPU: Intel i5-10300H (8) @ 2.500GHz
-                                </Highlight>
-                            </Text>
-                            <Text fontSize={{
-                                base: "8",
-                                sm: "10",
-                                md: "10",
-                                lg: "10",
-                                xl: "10"
-                            }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='GPU' styles={{ color: '#A9D18E' }}>
-                                    GPU: NVIDIA GeForce GTX 1650 Ti
-                                </Highlight>
-                            </Text>
-                            <Text fontSize={{
-                                base: "8",
-                                sm: "10",
-                                md: "10",
-                                lg: "10",
-                                xl: "10"
-                            }} marginLeft="5" fontFamily="Hack" color='white'>
-                                <Highlight query='Memory' styles={{ color: '#A9D18E' }}>
-                                    Memory: 8947MiB / 16171MiB
+                                <Highlight query='Backend' styles={{ color: '#A9D18E' }}>
+                                    Backend: PHP, MySQL
                                 </Highlight>
                             </Text>
                         </Box>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem
-                    rowStart="22" rowEnd="23"
-                    colStart="3" colEnd="20"
-                    borderRadius="full">
-                    <ChakraBox
-                        transition={{
-                            delay: 1.8,
-                            duration: 0.1
-                        }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}>
-                        <Text fontSize="14" color="purple.500">0ji54n@TAKO $~</Text>
                     </ChakraBox>
                 </GridItem>
             </Grid>

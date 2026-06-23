@@ -3,16 +3,7 @@ import {Flex,Grid,GridItem,SimpleGrid, Text, Highlight,Input,Box,IconButton} fro
 import { Link } from "react-router-dom";
 import {AiFillFileText} from "react-icons/ai";
 
-const FolderName = [
-    {
-        "name" : "CyberApo_Rev",
-        "link" : "./cyberaporev"
-    },
-    {
-        "name" : "Balatro",
-        "link" : "./balatro"
-    }
-]
+const FolderName = []
 
 const DolphinTer = () => {
     return (

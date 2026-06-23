@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Flex, Grid, GridItem, SimpleGrid, Text, Highlight, Input, IconButton, Box } from "@chakra-ui/react"
-import { AiFillFolder, AiFillFileText } from "react-icons/ai";
+import { AiFillFolder } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const FolderName = [
@@ -31,10 +31,6 @@ const FolderName = [
     {
         "name": "template_trading",
         "link": "./template_trading"
-    },
-    {
-        "name": "WhatisTemplate.txt",
-        "link": "./readme"
     },
 ]
 
@@ -69,9 +65,9 @@ const Dolphin = () => {
     return (
         <Flex justifyContent="center" marginTop="10" marginBottom="10">
             <Grid bgColor="#333F50" h={{
-                base: 1050,
-                sm: 1000,
-                md: 800,
+                base: 850,
+                sm: 750,
+                md: 780,
                 lg: 550,
                 xl: 550
             }} border="1px"
@@ -120,7 +116,10 @@ const Dolphin = () => {
                                 }
                                 return false;
                             }).map((item, index) => (
-                                <Box margin="10" key={index}>
+                                <Box margin={{
+                                    base: "5",
+                                    md: "10"
+                                }} key={index}>
                                     <Link to={item.link}>
                                         <IconButton
                                             _hover={{
@@ -129,7 +128,7 @@ const Dolphin = () => {
                                             colorScheme='rgba(52, 52, 52, 0.2)'
                                             boxSize="20"
                                             variant="ghost"
-                                            icon={item.name === "WhatisTemplate.txt" ? <AiFillFileText size="80" /> : <AiFillFolder size="80" />} />
+                                            icon={<AiFillFolder size="80" />} />
                                     </Link>
                                     <Text fontFamily="Hack">{item.name}</Text>
                                 </Box>

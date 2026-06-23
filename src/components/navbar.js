@@ -31,7 +31,7 @@ const Inner1 = () => {
           xl: "span 4"//3x3
         }}>
         <Flex justifyContent="center">
-          <SimpleGrid columns={5} gap={3}>
+          <SimpleGrid columns={4} gap={3}>
             <ChakraBox
               whileHover={{ scale: 1.1 }}
               whileTap={{
@@ -85,7 +85,7 @@ const Inner1 = () => {
                 </Link>
               </Tooltip>
             </ChakraBox>
-            <ChakraBox
+            {/* <ChakraBox
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}>
               <Tooltip label="Post" fontFamily="Calibri Light"
@@ -99,7 +99,7 @@ const Inner1 = () => {
                     color="#C5E0B4" />
                 </Link>
               </Tooltip>
-            </ChakraBox>
+            </ChakraBox> */}
           </SimpleGrid>
         </Flex>
 
