@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  ChakraProvider
-} from '@chakra-ui/react';
-import theme from "./components/background.js"
+import { ColorModeProvider } from './hooks/useColorMode';
 import { NavigationBar } from "./components/navbar"
 import { Home } from "./main/home"
-import Fonts from "./components/font"
 import { AboutMe } from "./main/aboutme"
 import { Works } from "./main/works"
-import { Post } from "./main/gallery.js"
+// import { Post } from "./main/gallery.js"
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Templates } from './main/templates.js';
 import { Another } from './main/newfolder.js';
@@ -20,20 +16,19 @@ import { TemplateCokhi2 } from "./main/template_cokhi2";
 import { TemplateFlower } from "./main/template_flower";
 import { TemplateNoithat } from "./main/template_noithat";
 import { TemplateTrading } from "./main/template_trading";
-import { CYBERAPO_REV } from './main/cyberaporev.js';
-import { Balatro } from './main/balatro.js';
+// import { CYBERAPO_REV } from './main/cyberaporev.js';
+// import { Balatro } from './main/balatro.js';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Fonts />
+    <ColorModeProvider>
       <Router>
         <NavigationBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about/" element={<AboutMe />} />
           <Route path="/works/" element={<Works />} />
-          <Route path="/posts/" element={<Post />} />
+          {/* <Route path="/posts/" element={<Post />} /> */}
           <Route path="works/templates" element={<Templates />} />
           <Route path="works/another" element={<Another />} />
           <Route path="works/templates/readme" element={<WhatIsTemplate />} />
@@ -44,11 +39,11 @@ function App() {
           <Route path="works/templates/template_flower" element={<TemplateFlower />} />
           <Route path="works/templates/template_noithat" element={<TemplateNoithat />} />
           <Route path="works/templates/template_trading" element={<TemplateTrading />} />
-          <Route path="works/cyberaporev" element={<CYBERAPO_REV />} />
-          <Route path="works/balatro" element={<Balatro />} />
+          {/* <Route path="works/cyberaporev" element={<CYBERAPO_REV />} /> */}
+          {/* <Route path="works/balatro" element={<Balatro />} /> */}
         </Routes>
       </Router>
-    </ChakraProvider>
+    </ColorModeProvider>
   );
 }
 

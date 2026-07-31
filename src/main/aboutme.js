@@ -1,257 +1,177 @@
 import React from "react";
-import { Flex, Grid, GridItem, Text, Highlight, SimpleGrid, Box, chakra, shouldForwardProp } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-const ChakraBox = chakra(motion.div, {
-    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
-});
+import HighlightText from "../components/HighlightText";
 
 const Txt = () => {
     return (
-        <Flex justifyContent="center" marginTop="5">
-            <Grid bgColor="#333F50" h={{
-                base: 150,
-                sm: 150,
-                md: 120,
-                lg: 120,
-                xl: 120
-            }} border="1px"
-                templateColumns='repeat(24, 1fr)'
-                templateRows='repeat(24, 1fr)'
-                w={{
-                    base: "80%",
-                    sm: "70%",
-                    md: "40%",
-                    lg: "40%",
-                    xl: "30%"
-                }}>
-                <GridItem
-                    colStart="4" colEnd="20"
-                    rowStart="3" rowEnd="5"
-                >
-                    <ChakraBox
-                        transition={{
-                            delay: 1,
-                            duration: 0.1
-                        }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}>
-                        <Text color="purple.500" fontSize="12">{'>'} <Highlight query="cat" styles={{ color: "green.400" }}>cat </Highlight><Highlight query="readme.txt" styles={{ color: "whitesmoke" }}>readme.txt</Highlight></Text>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem
-                    colStart="4" colEnd="24"
-                    rowStart="7" rowEnd="24"
-                >
-                    <ChakraBox
+        <div className="flex justify-center mt-5">
+            <div
+                className="flex flex-col bg-[#333F50] border w-[80%] sm:w-[70%] md:w-[40%] xl:w-[30%] p-4 sm:p-8"
+            >
+                <motion.div
+                    transition={{
+                        delay: 1,
+                        duration: 0.1
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}>
+                    <p className="text-purple-500 text-[12px]">{'>'} <HighlightText query="cat" className="text-green-400">cat </HighlightText><HighlightText query="readme.txt" className="text-[whitesmoke]">readme.txt</HighlightText></p>
+                </motion.div>
+                <div className="flex items-start gap-2 sm:gap-4 mt-4">
+                    <motion.div
                         transition={{
                             delay: 1.5,
                             duration: 0.1
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Box>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="12">
+                        <p className="font-['Hack']">{`>`}</p>
+                    </motion.div>
+                    <motion.div
+                        transition={{
+                            delay: 1.5,
+                            duration: 0.1
+                        }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}>
+                        <div>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[12px]">
                                 Name: Tran Duc Manh
-                            </Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="12" marginTop="2">
+                            </p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[12px] mt-2">
                                 Date of Birth: 2001/09/02
-                            </Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="12" marginTop="2">
+                            </p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[12px] mt-2">
                                 Language: Vietnamese, 日本語
-                            </Text>
-                        </Box>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem colStart="2" colEnd="3"
-                    rowStart="6" rowEnd="9">
-                    <ChakraBox
-                        transition={{
-                            delay: 1.5,
-                            duration: 0.1
-                        }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}>
-                        <Text fontFamily="Hack">{`>`}</Text>
-                    </ChakraBox>
-                </GridItem>
-            </Grid>
-        </Flex>
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
     )
 }
 const Skill = () => {
     return (
-        <Flex justifyContent="center" marginTop="5">
-            <Grid bgColor="#333F50" h={{
-                base: 200,
-                sm: 200,
-                md: 170,
-                lg: 150,
-                xl: 130
-            }} border="1px"
-                w={{
-                    base: "100%",
-                    sm: "80%",
-                    md: "50%",
-                    lg: "50%",
-                    xl: "40%"
-                }}
-                templateColumns='repeat(24, 1fr)'
-                templateRows='repeat(24, 1fr)'>
-                <GridItem
-                    colStart="4" colEnd="20"
-                    rowStart="3" rowEnd="5"
-                >
-                    <ChakraBox
-                        transition={{
-                            delay: 1,
-                            duration: 0.1
-                        }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}>
-                        <Text color="purple.500" fontSize="13">{'>'} <Highlight query="cd" styles={{ color: "green.400" }}>cd </Highlight><Highlight query="skills" styles={{ color: "blue.400" }}>skills </Highlight><Highlight query=";ls" styles={{ color: "green.400" }}>;ls</Highlight></Text>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem
-                    colStart="4" colEnd="24"
-                    rowStart="7" rowEnd="24">
-                    <ChakraBox
+        <div className="flex justify-center mt-5">
+            <div
+                className="flex flex-col bg-[#333F50] border w-[90%] sm:w-[80%] md:w-1/2 xl:w-[40%] p-4 sm:p-8"
+            >
+                <motion.div
+                    transition={{
+                        delay: 1,
+                        duration: 0.1
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}>
+                    <p className="text-purple-500 text-[13px]">{'>'} <HighlightText query="cd" className="text-green-400">cd </HighlightText><HighlightText query="skills" className="text-blue-400">skills </HighlightText><HighlightText query=";ls" className="text-green-400">;ls</HighlightText></p>
+                </motion.div>
+                <div className="flex items-start gap-2 sm:gap-4 mt-4">
+                    <motion.div
                         transition={{
                             delay: 1.5,
                             duration: 0.1
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <SimpleGrid
-                            columns={3} spacing={2}
-                            marginTop="1">
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >HTML</Text></Box>
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >CSS</Text></Box>
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >Javascript</Text></Box>
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >jQuery</Text></Box>
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >CakePHP</Text></Box>
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >phpMyAdmin</Text></Box>
-                            <Box height='16px'><Text fontFamily="Hack" color="blue.400" fontSize="13" >ReactJS</Text></Box>
-                        </SimpleGrid>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem colStart="2" colEnd="3"
-                    rowStart="8" rowEnd="9">
-                    <ChakraBox
+                        <p className="font-['Hack']">{`>`}</p>
+                    </motion.div>
+                    <motion.div
                         transition={{
                             delay: 1.5,
                             duration: 0.1
                         }}
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}>
-                        <Text fontFamily="Hack">{`>`}</Text>
-                    </ChakraBox>
-                </GridItem>
-            </Grid>
-        </Flex>
+                        animate={{ opacity: 1 }}
+                        className="flex-1">
+                        <div className="flex flex-wrap gap-y-2">
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">HTML</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">CSS</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">Javascript</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">jQuery</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">CakePHP</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">phpMyAdmin</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">ReactJS</p></div>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
     )
 }
 const Bio = () => {
     return (
-        <Flex justifyContent="center" marginTop="5" marginBottom="2">
-            <Grid bgColor="#333F50" h={{
-                base: 500,
-                sm: 500,
-                md: 400,
-                lg: 400,
-                xl: 400
-            }} border="1px"
-                w={{
-                    base: "90%",
-                    sm: "90%",
-                    md: "60%",
-                    lg: "60%",
-                    xl: "40%"
-                }}
-                templateColumns='repeat(24, 1fr)'
-                templateRows='repeat(24, 1fr)'>
-                <GridItem
-                    colStart="4" colEnd="20"
-                    rowStart="3" rowEnd="5"
-                >
-                    <ChakraBox
-                        transition={{
-                            delay: 1,
-                            duration: 0.1
-                        }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}>
-                        <Text color="purple.500" fontSize="14">{'>'} <Highlight query="cd" styles={{ color: "green.400" }}>cd</Highlight> <Highlight query="bio" styles={{ color: "blue.400" }}>bio</Highlight></Text>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem
-                    colStart="4" colEnd="24"
-                    rowStart="6" rowEnd="24">
-                    <ChakraBox
+        <div className="flex justify-center mt-5 mb-2">
+            <div
+                className="flex flex-col bg-[#333F50] border w-[90%] md:w-[60%] xl:w-[40%] p-4 sm:p-8"
+            >
+                <motion.div
+                    transition={{
+                        delay: 1,
+                        duration: 0.1
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}>
+                    <p className="text-purple-500 text-[14px]">{'>'} <HighlightText query="cd" className="text-green-400">cd</HighlightText> <HighlightText query="bio" className="text-blue-400">bio</HighlightText></p>
+                </motion.div>
+                <div className="flex items-start gap-2 sm:gap-4 mt-4">
+                    <motion.div
                         transition={{
                             delay: 1.5,
                             duration: 0.1
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Box>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">2019 Sep -{`>`} Thuy Loi University</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">|</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">2024 Jun -{`>`} Working at WEBPX Software Co., Ltd</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">|</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">2025 May -{`>`} Graduate</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">|</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">2026 Feb -{`>`} Employee of the Year Award 2025</Text>
-                            {/* <Text color="whitesmoke" fontFamily="Hack" fontSize="13">|</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">2023 Jan – 2023 Apr -{`>`} Freelance Game Translator</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">|</Text>
-                            <Text color="whitesmoke" fontFamily="Hack" fontSize="13">2023 Apr - Present - {`>`} Bridge System Engineer at ARIS VIETNAM CO., LTD</Text> */}
-                        </Box>
-                    </ChakraBox>
-                </GridItem>
-                <GridItem colStart="2" colEnd="3"
-                    rowStart="6" rowEnd="9">
-                    <ChakraBox
+                        <p className="font-['Hack']">{`>`}</p>
+                    </motion.div>
+                    <motion.div
                         transition={{
                             delay: 1.5,
                             duration: 0.1
                         }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}>
-                        <Text fontFamily="Hack">{`>`}</Text>
-                    </ChakraBox>
-                </GridItem>
-            </Grid>
-        </Flex>
+                        <div>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2019 Sep -{`>`} Thuy Loi University</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2024 Jun -{`>`} Working at WEBPX Software Co., Ltd</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2025 May -{`>`} Graduate</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2026 Feb -{`>`} Employee of the Year Award 2025</p>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
     )
 }
-export class AboutMe extends React.Component {
-    render() {
-        return (
-            <ChakraBox
-                transition={{
-                    duration: 1,
-                    ease: "linear"
-                }}
-                initial={{
-                    marginTop: 40,
-                    opacity: 0
-                }}
-                animate={{
-                    marginTop: 0,
-                    opacity: 1
-                }}
-                exit={{ opacity: 0 }}>
-                <div>
-                    <Helmet>
-                        <title>About me</title>
-                        <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/about" />
-                    </Helmet>
-                </div>
-                <Txt />
-                <Skill />
-                <Bio />
-            </ChakraBox>
-        )
-    };
+export const AboutMe = () => {
+    return (
+        <motion.div
+            transition={{
+                duration: 1,
+                ease: "linear"
+            }}
+            initial={{
+                marginTop: 40,
+                opacity: 0
+            }}
+            animate={{
+                marginTop: 0,
+                opacity: 1
+            }}
+            exit={{ opacity: 0 }}>
+            <div>
+                <Helmet>
+                    <title>About me</title>
+                    <link rel="canonical" href="https://tranmanh02901.github.io/blog/#/about" />
+                </Helmet>
+            </div>
+            <Txt />
+            <Skill />
+            <Bio />
+        </motion.div>
+    )
 };

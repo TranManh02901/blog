@@ -1,109 +1,78 @@
-import React,{useState} from "react";
-import {Flex,Grid,GridItem,SimpleGrid, Text, Highlight,Input,Box,IconButton} from "@chakra-ui/react"
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {AiFillFileText} from "react-icons/ai";
+import { AiFillFileText } from "react-icons/ai";
+import HighlightText from "../components/HighlightText";
 
 const FolderName = []
 
 const DolphinTer = () => {
     return (
-        <Flex justifyContent="center" marginTop = "10" marginBottom = "10">
-            <Grid bgColor="#333F50" h={50} border="1px"
-            w={{
-                base:"80%",
-                sm:"60%",
-                md:"50%",
-                lg:"40%",
-                xl:"30%"
-            }}
-            templateRows='repeat(8, 1fr)'
-            templateColumns='repeat(24, 1fr)'>
-                <GridItem colStart="4" colEnd="24"
-                rowStart="5" rowEnd="5">
-                    <Text color="purple.500" fontSize="14">0ji54n@TAKO $~ <Highlight query="dolphin" styles={{color:"green.500"}}>dolphin </Highlight><Highlight query="works" styles={{color:"blue.400"}}>works</Highlight> </Text>
-                </GridItem>
-            </Grid>
-        </Flex>
+        <div className="flex justify-center mt-10 mb-10">
+            <div
+                className="grid bg-[#333F50] border h-[50px] w-[80%] sm:w-[60%] md:w-1/2 lg:w-[40%] xl:w-[30%] grid-rows-[repeat(8,1fr)] grid-cols-[repeat(24,1fr)]"
+            >
+                <div className="[grid-column:4/24] [grid-row:5/5]">
+                    <p className="text-purple-500 text-[14px]">0ji54n@TAKO $~ <HighlightText query="dolphin" className="text-green-500">dolphin </HighlightText><HighlightText query="works" className="text-blue-400">works</HighlightText> </p>
+                </div>
+            </div>
+        </div>
     )
 }
 const Dolphin = () => {
     const [inputText, setInputText] = useState("");
     let inputHandler = (e) => {
-      var lowerCase = e.target.value.toLowerCase();
-      setInputText(lowerCase);
+        var lowerCase = e.target.value.toLowerCase();
+        setInputText(lowerCase);
     };
     return (
-        <Flex justifyContent="center" marginTop = "10" marginBottom = "10">
-            <Grid bgColor="#333F50" h={700} border="1px"
-            w={{
-                base:"90%",
-                sm:"90%",
-                md:"80%",
-                lg:"70%",
-                xl:"40%"
-            }}
-            templateColumns="repeat(24, 1fr)"
-            templateRows="repeat(24, 1fr)">
-                <GridItem
-                colStart="3" colEnd="23"
-                rowStart="2" rowEnd="4">
-                    <Input placeholder="Search..."
-                    inputMode="search"
-                    focusBorderColor="gray.900"
-                    bgColor="gray.800" 
-                    fontFamily="Hack"
-                    onChange={inputHandler}/>
-                </GridItem>
-                <GridItem
-                colStart="2" colEnd="24"
-                rowStart="5" rowEnd="24"
-                bgColor="gray.800">
-                    <SimpleGrid columns={{
-                        base:2,
-                        sm:2,
-                        md:2,
-                        lg:3,
-                        xl:3,
-                    }}>
+        <div className="flex justify-center mt-10 mb-10">
+            <div
+                className="grid bg-[#333F50] border h-[700px] w-[90%] md:w-4/5 lg:w-[70%] xl:w-[40%] grid-cols-[repeat(24,1fr)] grid-rows-[repeat(24,1fr)]"
+            >
+                <div className="[grid-column:3/23] [grid-row:2/4]">
+                    <input placeholder="Search..."
+                        inputMode="search"
+                        onChange={inputHandler}
+                        className="h-10 w-full rounded-md border border-gray-200 dark:border-whiteAlpha-300 bg-gray-800 px-4 text-base font-['Hack'] focus:outline-none focus:border-gray-900 focus:shadow-[0_0_0_1px_#171923]" />
+                </div>
+                <div
+                    className="[grid-column:2/24] [grid-row:5/24] bg-gray-800">
+                    <div className="grid grid-cols-2 lg:grid-cols-3">
                         {
-                        FolderName.filter(item =>{
-                            if (inputText === ""){
-                                return item;
-                            }
-                            else if (item.name.toLowerCase().includes(inputText.toLowerCase())){
-                                return item;
-                            }    
-                            return false;
-                        }).map((item, index) => (
-                            <Box margin="10" key={index}>
-                            <Link to={item.link}>
-                                <IconButton
-                                _hover={{
-                                    bgColor : 'rgba(52, 52, 52, 0.2)'
-                                  }}
-                                  colorScheme='rgba(52, 52, 52, 0.2)'
-                                boxSize="20"
-                                variant="ghost"
-                                icon={<AiFillFileText size="80"/>}/>
-                            </Link>
-                            <Text fontFamily="Hack">{item.name}</Text>
-                            </Box>
-                        ))
+                            FolderName.filter(item => {
+                                if (inputText === "") {
+                                    return item;
+                                }
+                                else if (item.name.toLowerCase().includes(inputText.toLowerCase())) {
+                                    return item;
+                                }
+                                return false;
+                            }).map((item, index) => (
+                                <div className="m-10" key={index}>
+                                    <Link to={item.link}>
+                                        <button
+                                            type="button"
+                                            className="inline-flex h-20 w-20 items-center justify-center rounded-md bg-transparent transition-colors hover:bg-[rgba(52,52,52,0.2)]"
+                                        >
+                                            <AiFillFileText size="80" />
+                                        </button>
+                                    </Link>
+                                    <p className="font-['Hack']">{item.name}</p>
+                                </div>
+                            ))
                         }
-                    </SimpleGrid>
-                </GridItem> 
-            </Grid>
-        </Flex>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 
-export class Another extends React.Component {
-    render(){
-        return(
-            <Box>
-                <DolphinTer/>
-                <Dolphin/>
-            </Box>
-        )
-    };
+export const Another = () => {
+    return (
+        <div>
+            <DolphinTer />
+            <Dolphin />
+        </div>
+    )
 };
