@@ -4,15 +4,11 @@
   "private": true,
   "homepage": "https://tranmanh02901.github.io/blog",
   "dependencies": {
-    "@chakra-ui/react": "^2.3.7",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@giscus/react": "^3.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "better-react-mathjax": "^2.0.3",
-    "chakra-ui-markdown-renderer": "^4.1.0",
     "framer-motion": "^6.5.1",
     "mathjax-react": "^2.0.1",
     "react": "^18.2.0",
@@ -51,6 +47,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "autoprefixer": "^10.5.4",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^3.4.19"
   }
 }
