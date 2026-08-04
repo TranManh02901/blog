@@ -2,24 +2,24 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { BiNews, BiArrowBack } from 'react-icons/bi';
-import { GNEWS_URL, cacheArticles, getCachedArticle, formatDate } from './gnews';
+import { fetchArticles, getCachedArticle, formatDate } from './gnews';
 
 export const BlogDetail = () => {
     const { id } = useParams();
     const [article, setArticle] = useState(() => getCachedArticle(id));
     const [status, setStatus] = useState(() => (getCachedArticle(id) ? 'done' : 'loading'));
+    const [retryCount, setRetryCount] = useState(0);
     const fetchedForId = useRef(null);
 
     useEffect(() => {
         if (article) return;
-        if (fetchedForId.current === id) return;
+        if (fetchedForId.current === id && retryCount === 0) return;
         fetchedForId.current = id;
 
-        fetch(GNEWS_URL)
-            .then((res) => res.json())
-            .then((data) => {
-                const found = (data.articles || []).find((a) => String(a.id) === String(id));
-                cacheArticles(data.articles || []);
+        setStatus('loading');
+        fetchArticles()
+            .then((articles) => {
+                const found = articles.find((a) => String(a.id) === String(id));
                 if (found) {
                     setArticle(found);
                     setStatus('done');
@@ -30,7 +30,7 @@ export const BlogDetail = () => {
             .catch(() => {
                 setStatus('error');
             });
-    }, [id, article]);
+    }, [id, article, retryCount]);
 
     return (
         <div className="flex flex-col items-center mt-10 mb-10 gap-6">
@@ -49,7 +49,16 @@ export const BlogDetail = () => {
                     <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Loading...</p>
                 )}
                 {status === 'error' && (
-                    <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Không thể tải bài viết lúc này.</p>
+                    <div className="flex flex-col items-center gap-3">
+                        <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Không thể tải bài viết lúc này.</p>
+                        <button
+                            type="button"
+                            onClick={() => setRetryCount((n) => n + 1)}
+                            className="px-4 py-1 rounded-md bg-[#333F50] text-[whitesmoke] text-[13px] font-['Hack'] hover:bg-[#3a4760] transition-colors"
+                        >
+                            Thử lại
+                        </button>
+                    </div>
                 )}
                 {status === 'not-found' && (
                     <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Không tìm thấy bài viết này.</p>
