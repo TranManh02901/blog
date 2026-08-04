@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { BiNews, BiArrowBack } from 'react-icons/bi';
-import { GNEWS_URL, cacheArticles, getCachedArticle, formatDate } from './gnews';
+import { fetchArticles, getCachedArticle, formatDate } from './gnews';
 
 export const BlogDetail = () => {
     const { id } = useParams();
@@ -15,11 +15,9 @@ export const BlogDetail = () => {
         if (fetchedForId.current === id) return;
         fetchedForId.current = id;
 
-        fetch(GNEWS_URL)
-            .then((res) => res.json())
-            .then((data) => {
-                const found = (data.articles || []).find((a) => String(a.id) === String(id));
-                cacheArticles(data.articles || []);
+        fetchArticles()
+            .then((articles) => {
+                const found = articles.find((a) => String(a.id) === String(id));
                 if (found) {
                     setArticle(found);
                     setStatus('done');

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BiNews } from 'react-icons/bi';
 import { Helmet } from 'react-helmet';
-import { GNEWS_URL, cacheArticles, formatDate } from './gnews';
+import { fetchArticles, formatDate } from './gnews';
 
 const ArticleCard = ({ article }) => {
     const [imgError, setImgError] = useState(false);
@@ -86,11 +86,9 @@ export const Blogs = () => {
         if (hasFetchedRef.current) return;
         hasFetchedRef.current = true;
 
-        fetch(GNEWS_URL)
-            .then((res) => res.json())
-            .then((data) => {
-                setArticles(data.articles || []);
-                cacheArticles(data.articles || []);
+        fetchArticles()
+            .then((articles) => {
+                setArticles(articles);
                 setStatus('done');
             })
             .catch(() => {
