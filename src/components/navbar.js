@@ -1,7 +1,7 @@
 import React from "react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import Avt from "./avt"
-import { BiHomeCircle, BiUser, BiFolderOpen } from "react-icons/bi";
+import { BiHomeCircle, BiUser, BiFolderOpen, BiNews } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { FiGithub, FiFacebook } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
@@ -21,7 +21,7 @@ const Inner1 = () => {
         className="w-full rounded-md bg-[#2C3038] col-span-12 sm:col-span-12 md:[grid-column:span_13/span_13] lg:col-span-12 xl:col-span-4"
       >
         <div className="flex justify-center">
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-5 gap-2">
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{
@@ -59,6 +59,17 @@ const Inner1 = () => {
                 <Link to="works">
                   <button type="button" className={`${socialIconClass} text-[#DEEBF7]`}>
                     <BiFolderOpen />
+                  </button>
+                </Link>
+              </Tooltip>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}>
+              <Tooltip label="News">
+                <Link to="blogs">
+                  <button type="button" className={`${socialIconClass} text-[#3e8cf5]`}>
+                    <BiNews />
                   </button>
                 </Link>
               </Tooltip>
