@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BiNews } from 'react-icons/bi';
 import { Helmet } from 'react-helmet';
-import { fetchArticles, formatDate } from './gnews';
+import { GNEWS_URL, cacheArticles, formatDate } from './gnews';
 
 const ArticleCard = ({ article }) => {
     const [imgError, setImgError] = useState(false);
@@ -80,24 +80,23 @@ export const Blogs = () => {
     const [articles, setArticles] = useState([]);
     const [status, setStatus] = useState('loading');
     const [page, setPage] = useState(1);
-    const [retryCount, setRetryCount] = useState(0);
     const hasFetchedRef = useRef(false);
 
     useEffect(() => {
-        // skip the StrictMode-dev double-invoke, but always allow a manual retry
-        if (hasFetchedRef.current && retryCount === 0) return;
+        if (hasFetchedRef.current) return;
         hasFetchedRef.current = true;
 
-        setStatus('loading');
-        fetchArticles()
-            .then((articles) => {
-                setArticles(articles);
+        fetch(GNEWS_URL)
+            .then((res) => res.json())
+            .then((data) => {
+                setArticles(data.articles || []);
+                cacheArticles(data.articles || []);
                 setStatus('done');
             })
             .catch(() => {
                 setStatus('error');
             });
-    }, [retryCount]);
+    }, []);
 
     const pageCount = Math.max(1, Math.ceil(articles.length / PAGE_SIZE));
     const currentArticles = articles.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -119,16 +118,7 @@ export const Blogs = () => {
                     <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Loading...</p>
                 )}
                 {status === 'error' && (
-                    <div className="flex flex-col items-center gap-3">
-                        <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Không thể tải tin tức lúc này.</p>
-                        <button
-                            type="button"
-                            onClick={() => setRetryCount((n) => n + 1)}
-                            className="px-4 py-1 rounded-md bg-[#333F50] text-[whitesmoke] text-[13px] font-['Hack'] hover:bg-[#3a4760] transition-colors"
-                        >
-                            Thử lại
-                        </button>
-                    </div>
+                    <p className="text-center text-blackAlpha-700 dark:text-white font-['Hack']">Không thể tải tin tức lúc này.</p>
                 )}
                 {status === 'done' && currentArticles.map((article) => (
                     <ArticleCard key={article.id || article.url} article={article} />
