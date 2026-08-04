@@ -4,6 +4,8 @@ import { NavigationBar } from "./components/navbar"
 import { Home } from "./main/home"
 import { AboutMe } from "./main/aboutme"
 import { Works } from "./main/works"
+import { Blogs } from './main/blogs';
+import { BlogDetail } from './main/blog_detail';
 // import { Post } from "./main/gallery.js"
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Templates } from './main/templates.js';
@@ -28,6 +30,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about/" element={<AboutMe />} />
           <Route path="/works/" element={<Works />} />
+          <Route path="/blogs/" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<BlogDetail />} />
           {/* <Route path="/posts/" element={<Post />} /> */}
           <Route path="works/templates" element={<Templates />} />
           <Route path="works/another" element={<Another />} />
