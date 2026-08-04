@@ -36,19 +36,27 @@ export async function fetchArticles({ forceRefresh = false } = {}) {
         return cached.articles;
     }
 
-    const res = await fetch(GNEWS_URL);
-    const data = await res.json();
+    // GNews appears to only send CORS headers on successful responses —
+    // when it's rate-limited (429) it can omit them entirely, which makes
+    // the browser reject the request outright (fetch() rejects before a
+    // response is even readable, showing up as a CORS error in devtools
+    // even though the real cause is the rate limit). So *any* failure here
+    // — rejected fetch, non-ok status, or a malformed body — falls back to
+    // whatever was cached before, rather than only handling non-ok responses.
+    try {
+        const res = await fetch(GNEWS_URL);
+        const data = await res.json();
 
-    if (!res.ok || !Array.isArray(data.articles)) {
-        // e.g. rate-limited (429) — don't cache a bad/empty result, just
-        // fall back to whatever we had cached before (even if stale) so a
-        // transient rate-limit doesn't blank out an otherwise-working page
+        if (!res.ok || !Array.isArray(data.articles)) {
+            throw new Error(data.errors?.[0] || `GNews request failed (${res.status})`);
+        }
+
+        writeCache(data.articles);
+        return data.articles;
+    } catch (err) {
         if (cached) return cached.articles;
-        throw new Error(data.errors?.[0] || `GNews request failed (${res.status})`);
+        throw err;
     }
-
-    writeCache(data.articles);
-    return data.articles;
 }
 
 export function getCachedArticle(id) {
