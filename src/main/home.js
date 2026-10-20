@@ -90,7 +90,7 @@ export const Neofetch = () => {
                             {infoLine('Address', 'Address: Hanoi, Vietnam')}
                             {infoLine('Email', 'Email: tranducmanh02901@gmail.com')}
                             {infoLine('Website', 'Website: https://tranmanh02901.github.io/blog/#/')}
-                            {infoLine('Occupation', 'Occupation: Front-end Developer')}
+                            {infoLine('Occupation', 'Occupation: Web Developer')}
                             {infoLine('Experience', 'Experience: 2+ years')}
                             {infoLine('Languages', 'Languages: Vietnamese, Japanese')}
                             {infoLine('Frontend', 'Frontend: HTML, CSS, JavaScript, ReactJS')}

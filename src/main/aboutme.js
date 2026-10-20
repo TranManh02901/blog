@@ -90,9 +90,10 @@ const Skill = () => {
                             <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">CSS</p></div>
                             <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">Javascript</p></div>
                             <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">jQuery</p></div>
-                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">CakePHP</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">PHP</p></div>
                             <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">phpMyAdmin</p></div>
                             <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">ReactJS</p></div>
+                            <div className="w-1/3"><p className="font-['Hack'] text-blue-400 text-[13px]">Github</p></div>
                         </div>
                     </motion.div>
                 </div>
@@ -135,11 +136,13 @@ const Bio = () => {
                         <div>
                             <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2019 Sep -{`>`} Thuy Loi University</p>
                             <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
-                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2024 Jun -{`>`} Working at WEBPX Software Co., Ltd</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2024 Jun -{`>`} Working at WebPX Software Company Limited</p>
                             <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
                             <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2025 May -{`>`} Graduate</p>
                             <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
                             <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2026 Feb -{`>`} Employee of the Year Award 2025</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">|</p>
+                            <p className="text-[whitesmoke] font-['Hack'] text-[13px]">2026 Aug -{`>`} Working at Future Tech Global Viet Nam Joint Stock Company</p>
                         </div>
                     </motion.div>
                 </div>
